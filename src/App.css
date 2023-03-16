@@ -1,38 +1,231 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navBar_container {
+    width: 100%;
+    max-width: 98%;
+    height: 10vh;
+    position: fixed;
+    box-shadow: 0px 6px 12px 0px rgba(128, 128, 128, 0.249);
+    z-index: 3;
+    top: 0px;
+    background-color: white;
+    padding: 1% 1%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navBar_container_box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navBar_container_box_tab {
+    display: flex;
+    padding: 0% 1%;
+    width: 100%;
+    flex-direction: row;
+    list-style: none;
 }
 
-.App-link {
-  color: #61dafb;
+.navBar_container_box_tab li:first-child {
+    width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navBar_container_box_tab li:nth-child(2) {
+    padding-right: 3%;
+}
+
+.navBar_container_box_logo {
+    height: 9vh;
+    width: auto;
+}
+
+.navBar_container_box_search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1%;
+    border-radius: 8px;
+    border: 1px solid #1a202c1b;
+    font-size: 26px;
+    height: 6vh;
+    width: auto;
+    color: rgba(128, 128, 128, 0.468);
+}
+
+.navBar_container_box_search:focus-visible {
+    outline: 1px solid blue !important;
+}
+
+.navBar_container_box_search input {
+    border: none;
+    padding-left: 5%;
+    height: 100%;
+}
+
+.navBar_container_box_search input::placeholder {
+    color: #323f5979;
+    font-size: 17px;
+}
+
+.navBar_container_box_search input:focus-visible {
+    /* border: none;   */
+    outline: none;
+}
+
+.main-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5%;
+}
+
+.main-section-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0% 2%
+}
+
+.main-section-content-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    height: 350px;
+}
+
+.main-section-content-text h1 {
+    font-size: 3.7rem;
+}
+
+.main-section-content-image img {
+    height: 100%;
+    width: 100%;
+}
+
+.main-section-content span {
+    font-size: 18px;
+    max-width: 80%;
+}
+
+.theme-button {
+    height: 38px;
+    width: 110px;
+    background-color: rgb(214, 104, 31);
+    color: white;
+    border: none;
+    font-size: 14px;
+    border-radius: 6px;
+}
+
+.recent-post-container {
+    margin: 0 4%;
+}
+
+.recent-post-container h2 {
+    margin-bottom: 3%;
+    font-size: 25x;
+}
+
+.card-box {
+    width: 100%;
+    height: auto;
+    border-radius: 7px;
+    overflow: hidden;
+    box-shadow: 0px 0px 18px 5px rgba(128, 128, 128, 0.26);
+    /* margin: 0 0 5% 5%; */
+    /* border: 1px solid black; */
+}
+
+.card-box-image {
+    width: 100%;
+}
+
+.card-box-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 13px;
+}
+
+.card-box-content h3 {
+    margin-bottom: 10px;
+}
+
+.card-box-content div {
+    margin-top: 10px;
+}
+
+.card-box-content button {
+    margin-top: 10px;
+    float: right;
+}
+
+.editor-section {
+    width: 88%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-bottom: 15px; */
+}
+
+.editor-section img {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+}
+
+.post-cards {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 90px;
+    padding: 0 1%;
+    justify-items: center;
+}
+
+.blog-tags {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.blog-tags span {
+    background-color: #edf2f7;
+    border-radius: 5px;
+    font-size: 12px;
+    height: 25px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    width: 60px;
+}
+
+.card-box-content-button {
+    width: 100%;
+}
+
+.read-more-button {
+    width: 100%;
+    margin: 3%;
+    text-align: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.footer-box {
+    width: 100%;
+    height: 15vh;
+    color: white;
+    font-size: 23px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(214, 104, 31);
 }
